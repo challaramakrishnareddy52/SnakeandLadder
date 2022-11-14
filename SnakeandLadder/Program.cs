@@ -12,7 +12,7 @@
         public static void RollDice()
         {
             Random random= new Random();
-            int dice = random.Next(3);
+            int dice = random.Next(1, 7);
             dice = dice + 1;
             Console.WriteLine("Dice Num :" + dice);
         }
