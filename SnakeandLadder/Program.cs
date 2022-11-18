@@ -26,7 +26,11 @@ namespace SnakeandLadder
                         currPos += dice;
                         if(currPos > 100)
                         {
+<<<<<<< HEAD
                             currPos = currPos - dice;
+=======
+                            currPos= currPos - dice;
+>>>>>>> 095e9d2be3f751c443ff7e74324d158f93c1bde2
                         }
                         Console.WriteLine("ladder");
                         Console.WriteLine("currPos:" + currPos);
