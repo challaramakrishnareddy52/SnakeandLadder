@@ -8,47 +8,45 @@ namespace SnakeandLadder
 
         static void Main(string[] args)
         {
-           const int startPos = 0;
-           const int numofPlayers = 2;
-           const int currPos = 0;
-           const int diceVal = 0;
-           const int winPos = 100;
+            const int startPos = 0;
+            int currPos = 0;
+            int diceVal = 0;
+            const int winPos = 100;
 
-
-             static void RollDice(int numofPlayers,int currPos)
-             {
-                Console.WriteLine("Enter Number Of Players");
-                numofPlayers = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Enter winning Position");
-               int winPos = Convert.ToInt32(Console.ReadLine());
-
+            while (currPos < winPos)
+            {
                 Random random = new Random();
                 int dice = random.Next(1, 7);
                 Console.WriteLine("Dice Num :" + dice);
-
                 Random randomNum = new Random();
-                int option = random.Next(1, 7);
-                switch (option) 
+                int option = random.Next(0, 3);
+                switch (option)
                 {
                     case 0:
                         currPos += dice;
                         Console.WriteLine("ladder");
+                        Console.WriteLine("currPos:" + currPos);
                         break;
                     case 1:
-                        currPos += dice;
+                        currPos -= dice;
+                        if(currPos<0)
+                        {
+                            currPos= 0;
+                        }
                         Console.WriteLine("Snake");
+                        Console.WriteLine("currPos:" + currPos);
                         break;
                     default:
                         Console.WriteLine("No Play");
+                        Console.WriteLine("currPos:" + currPos);
                         break;
                 }
-                winPos= currPos * numofPlayers;
-                Console.WriteLine("winPos : " +winPos);
-
             }
-            Console.WriteLine("numofPlayers : " +numofPlayers); 
+
+            Console.WriteLine("winPos : " + winPos);
+
         }
     }
 }
- 
+
+
