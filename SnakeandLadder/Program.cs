@@ -24,6 +24,10 @@ namespace SnakeandLadder
                 {
                     case 0:
                         currPos += dice;
+                        if(currPos > 100)
+                        {
+                            currPos= 100;
+                        }
                         Console.WriteLine("ladder");
                         Console.WriteLine("currPos:" + currPos);
                         break;
