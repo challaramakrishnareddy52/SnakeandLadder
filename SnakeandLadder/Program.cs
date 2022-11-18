@@ -12,9 +12,11 @@ namespace SnakeandLadder
             int currPos = 0;
             int diceVal = 0;
             const int winPos = 100;
+            int diceRole = 0;
 
             while (currPos < winPos)
             {
+                diceRole++;
                 Random random = new Random();
                 int dice = random.Next(1, 7);
                 Console.WriteLine("Dice Num :" + dice);
@@ -48,6 +50,7 @@ namespace SnakeandLadder
             }
 
             Console.WriteLine("winPos : " + winPos);
+            Console.WriteLine("diceRole:" + diceRole);
 
         }
     }
