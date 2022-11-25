@@ -24,7 +24,7 @@ namespace SnakeandLadder
                 Console.WriteLine("Dice Num :" + dice);
 
                 Random randomNum = new Random();
-                int option = random.Next(1, 7);
+                int option = random.Next(0, 1);
                 switch (option) 
                 {
                     case 0:
